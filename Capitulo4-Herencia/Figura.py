@@ -8,8 +8,7 @@
 # Note:Se requiere instalar la libreria Tkinter
 #########################################################################################
 #########################################################################################
-from Tkinter import *
-
+from tkinter import *
 class Figura(object):
     def __init__(self, base, altura, x, y):
         self.base = base
@@ -20,15 +19,12 @@ class Figura(object):
         self.root = Tk()
         self.ventana = Canvas(width=800, height=600, bg='white')
         self.ventana.pack(expand=YES, fill=BOTH)
-
-    # Metodos para cambiar la Base y la altura
+    # Métodos para cambiar la Base y la altura
     def setBase(self, nuevaBase):
         self.base = nuevaBase
-
     def setAltura(self, nuevaAltura):
         self.altura = nuevaAltura
-
-    # Metodo especial que devolvera al llamar un String del objeto
+    # Metodo especial que devolverá al llamar un String del objeto
     def __str__(self):
         return str(self.area)
 
